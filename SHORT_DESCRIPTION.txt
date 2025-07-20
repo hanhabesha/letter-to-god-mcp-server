@@ -1,0 +1,1 @@
+A Model Context Protocol server that provides personalized Bible guidance through AI - get spiritual wisdom tailored to your name and current struggles with 3 relevant scriptures, biblical stories, and practical advice.
