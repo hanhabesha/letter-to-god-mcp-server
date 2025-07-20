@@ -1,0 +1,52 @@
+{
+  "name": "bible-expert-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "bible-expert": "./cli.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "cli": "node cli.js",
+    "test": "node test-server.js",
+    "build": "npx tsc",
+    "help": "node cli.js --help",
+    "setup": "cp .env.example .env && echo 'Please edit .env file with your OpenAI API key'"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bible",
+    "spiritual-guidance",
+    "openai",
+    "gpt-4",
+    "cli",
+    "server",
+    "biblical-mentor",
+    "faith",
+    "scripture"
+  ],
+  "author": "Bible Expert MCP Server",
+  "license": "MIT",
+  "description": "A Model Context Protocol (MCP) server that provides personalized Bible guidance and mentorship through AI integration with OpenAI's ChatGPT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/bible-expert-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/bible-expert-mcp-server/issues"
+  },
+  "homepage": "https://github.com/yourusername/bible-expert-mcp-server#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "dotenv": "^17.2.0",
+    "openai": "^5.10.1",
+    "yargs": "^18.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "typescript": "^5.8.3"
+  }
+}
