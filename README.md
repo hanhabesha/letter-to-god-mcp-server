@@ -14,7 +14,28 @@ A Model Context Protocol (MCP) server that provides personalized Bible guidance 
 
 ## Quick Start
 
-### Option 1: Command Line Interface (Immediate Use)
+### ✅ Option 1: Use Instantly via NPX (No Install Required)
+
+```bash
+# Install dependencies
+```bash
+npm npx letter-to-god-mcp-server
+```
+# Set your API key:
+You must provide your OpenAI API key for the tool to work.
+
+• Option A: Set environment variable
+```bash
+     export OPENAI_API_KEY="your-api-key-here"
+```
+• Option B: Create .env file in current directory
+```bash
+     echo "OPENAI_API_KEY=your-api-key-here" > .env
+```
+Place this .env file in the same directory where you run the command.
+
+
+### Option 2: Command Line Interface (Immediate Use)
 
 The fastest way to get Bible guidance:
 
@@ -31,7 +52,7 @@ node cli.js -n "David" -f "feeling lost and confused"
 node cli.js --help
 ```
 
-### Option 2: MCP Server (For Integration)
+### Option 3: MCP Server (For Integration)
 
 Run as an MCP server for integration with MCP clients:
 
