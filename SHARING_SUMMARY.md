@@ -1,4 +1,4 @@
-# 🚀 Your Bible Expert MCP Server is Ready for GitHub!
+# 🚀 Your Letter to God MCP Server is Ready for GitHub!
 
 ## ✅ What's Been Prepared
 
@@ -33,13 +33,13 @@ Your project is now fully prepared for GitHub sharing with:
 ### 1. Create GitHub Repository
 ```bash
 # Go to github.com and create a new repository named:
-# bible-expert-mcp-server
+# letter-to-god-mcp-server
 ```
 
 ### 2. Connect and Push
 ```bash
 # Replace 'yourusername' with your actual GitHub username
-git remote add origin https://github.com/yourusername/bible-expert-mcp-server.git
+git remote add origin https://github.com/yourusername/letter-to-god-mcp-server.git
 git branch -M main
 git push -u origin main
 ```
@@ -62,15 +62,15 @@ git push
 ### Option 1: Quick Install (Recommended)
 ```bash
 # Clone and setup in one command
-git clone https://github.com/yourusername/bible-expert-mcp-server.git
-cd bible-expert-mcp-server
+git clone https://github.com/yourusername/letter-to-god-mcp-server.git
+cd letter-to-god-mcp-server
 ./install.sh
 ```
 
 ### Option 2: Manual Install
 ```bash
-git clone https://github.com/yourusername/bible-expert-mcp-server.git
-cd bible-expert-mcp-server
+git clone https://github.com/yourusername/letter-to-god-mcp-server.git
+cd letter-to-god-mcp-server
 npm install
 npm run setup
 # Edit .env with OpenAI API key
@@ -79,7 +79,7 @@ npm test
 
 ### Option 3: One-Line Install
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/bible-expert-mcp-server/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/yourusername/letter-to-god-mcp-server/main/install.sh | bash
 ```
 
 ## 🌟 Features Users Will Get
@@ -105,7 +105,7 @@ npm run cli -- --name "Sarah" --feeling "struggling with forgiveness"
 
 ## 🎉 Ready to Share!
 
-Your Bible Expert MCP Server is now:
+Your Letter to God MCP Server is now:
 - ✅ **Secure** - No API keys exposed
 - ✅ **Professional** - Complete documentation and setup
 - ✅ **User-friendly** - Easy installation and usage
@@ -132,4 +132,4 @@ Users will have access to:
 - **Usage examples** for different scenarios
 - **Installation script** for automated setup
 
-Your Bible Expert MCP Server is ready to bless the community! 🙏✨
+Your Letter to God MCP Server is ready to bless the community! 🙏✨

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Bible Expert MCP Server - Quick Installation Script
-# This script helps users quickly set up the Bible Expert MCP Server
+# Letter to God MCP Server - Quick Installation Script
+# This script helps users quickly set up the Letter to God MCP Server
 
 set -e  # Exit on any error
 
-echo "🌟 Bible Expert MCP Server - Quick Setup 🌟"
+echo "🌟 Letter to God MCP Server - Quick Setup 🌟"
 echo "=============================================="
 
 # Check if Node.js is installed

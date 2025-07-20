@@ -1,4 +1,4 @@
-# Bible Expert - Letter to God MCP Server
+# Letter to God MCP Server
 
 A Model Context Protocol (MCP) server that provides personalized Bible guidance and mentorship through AI integration with OpenAI's ChatGPT.
 

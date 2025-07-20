@@ -1,10 +1,10 @@
 {
-  "name": "bible-expert-mcp-server",
+  "name": "letter-to-god-mcp-server",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
   "bin": {
-    "bible-expert": "./cli.js"
+    "letter-to-god": "./cli.js"
   },
   "scripts": {
     "start": "node index.js",
@@ -27,17 +27,17 @@
     "faith",
     "scripture"
   ],
-  "author": "Bible Expert MCP Server",
+  "author": "Letter to God MCP Server",
   "license": "MIT",
   "description": "A Model Context Protocol (MCP) server that provides personalized Bible guidance and mentorship through AI integration with OpenAI's ChatGPT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/bible-expert-mcp-server.git"
+    "url": "git+https://github.com/yourusername/letter-to-god-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/bible-expert-mcp-server/issues"
+    "url": "https://github.com/yourusername/letter-to-god-mcp-server/issues"
   },
-  "homepage": "https://github.com/yourusername/bible-expert-mcp-server#readme",
+  "homepage": "https://github.com/yourusername/letter-to-god-mcp-server#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "dotenv": "^17.2.0",

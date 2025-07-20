@@ -1,4 +1,4 @@
-# Installation Guide - Bible Expert MCP Server
+# Installation Guide - Letter to God MCP Server
 
 ## Quick Start
 
@@ -6,8 +6,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bible-expert-mcp-server.git
-cd bible-expert-mcp-server
+git clone https://github.com/yourusername/letter-to-god-mcp-server.git
+cd letter-to-god-mcp-server
 
 # Install dependencies
 npm install
@@ -29,13 +29,13 @@ npm run cli -- --name "YourName" --feeling "testing the installation"
 
 ```bash
 # Install globally via npm
-npm install -g bible-expert-mcp-server
+npm install -g letter-to-god-mcp-server
 
 # Setup configuration
-bible-expert --setup
+letter-to-god --setup
 
 # Use directly
-bible-expert --name "YourName" --feeling "your current situation"
+letter-to-god --name "YourName" --feeling "your current situation"
 ```
 
 ## Prerequisites
@@ -121,10 +121,10 @@ Add to your Cline MCP configuration:
 ```json
 {
   "mcpServers": {
-    "bible-expert": {
+    "letter-to-god": {
       "command": "node",
-      "args": ["/path/to/bible-expert-mcp-server/index.js"],
-      "cwd": "/path/to/bible-expert-mcp-server"
+      "args": ["/path/to/letter-to-god-mcp-server/index.js"],
+      "cwd": "/path/to/letter-to-god-mcp-server"
     }
   }
 }
@@ -135,10 +135,10 @@ Add to `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
-    "bible-expert": {
+    "letter-to-god": {
       "command": "node",
-      "args": ["/absolute/path/to/bible-expert-mcp-server/index.js"],
-      "cwd": "/absolute/path/to/bible-expert-mcp-server"
+      "args": ["/absolute/path/to/letter-to-god-mcp-server/index.js"],
+      "cwd": "/absolute/path/to/letter-to-god-mcp-server"
     }
   }
 }
@@ -180,8 +180,8 @@ If you want to contribute or modify the code:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bible-expert-mcp-server.git
-cd bible-expert-mcp-server
+git clone https://github.com/yourusername/letter-to-god-mcp-server.git
+cd letter-to-god-mcp-server
 
 # Install dependencies
 npm install

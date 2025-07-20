@@ -1,12 +1,12 @@
 # GitHub Setup Guide
 
-## How to Host Your Bible Expert MCP Server on GitHub
+## How to Host Your Letter to God MCP Server on GitHub
 
 ### Step 1: Initialize Git Repository
 
 ```bash
 # Navigate to your project directory
-cd /path/to/your/bible-expert-mcp-server
+cd /path/to/your/letter-to-god-mcp-server
 
 # Initialize git repository
 git init
@@ -15,7 +15,7 @@ git init
 git add .
 
 # Make initial commit
-git commit -m "Initial commit: Bible Expert MCP Server"
+git commit -m "Initial commit: Letter to God MCP Server"
 ```
 
 ### Step 2: Create GitHub Repository
@@ -24,7 +24,7 @@ git commit -m "Initial commit: Bible Expert MCP Server"
 2. **Create New Repository**:
    - Click the "+" icon in top right
    - Select "New repository"
-   - Repository name: `bible-expert-mcp-server`
+   - Repository name: `letter-to-god-mcp-server`
    - Description: "A Model Context Protocol server providing personalized Bible guidance through AI"
    - Make it **Public** (so others can access it)
    - **Don't** initialize with README (you already have one)
@@ -34,7 +34,7 @@ git commit -m "Initial commit: Bible Expert MCP Server"
 
 ```bash
 # Add GitHub remote (replace 'yourusername' with your GitHub username)
-git remote add origin https://github.com/yourusername/bible-expert-mcp-server.git
+git remote add origin https://github.com/yourusername/letter-to-god-mcp-server.git
 
 # Push to GitHub
 git branch -M main
@@ -49,12 +49,12 @@ Update the URLs in your `package.json` file:
 {
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/bible-expert-mcp-server.git"
+    "url": "git+https://github.com/yourusername/letter-to-god-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/bible-expert-mcp-server/issues"
+    "url": "https://github.com/yourusername/letter-to-god-mcp-server/issues"
   },
-  "homepage": "https://github.com/yourusername/bible-expert-mcp-server#readme"
+  "homepage": "https://github.com/yourusername/letter-to-god-mcp-server#readme"
 }
 ```
 
@@ -77,7 +77,7 @@ git push
    - Go to "Releases" tab
    - Click "Create a new release"
    - Tag version: `v1.0.0`
-   - Release title: `Bible Expert MCP Server v1.0.0`
+   - Release title: `Letter to God MCP Server v1.0.0`
    - Description: Include features and installation instructions
 
 ### Step 6: Add Repository Badges
@@ -85,13 +85,13 @@ git push
 Add these badges to the top of your README.md:
 
 ```markdown
-# Bible Expert - Letter to God MCP Server
+# Letter to God MCP Server
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
-[![GitHub release](https://img.shields.io/github/release/yourusername/bible-expert-mcp-server.svg)](https://github.com/yourusername/bible-expert-mcp-server/releases)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/bible-expert-mcp-server.svg)](https://github.com/yourusername/bible-expert-mcp-server/issues)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/bible-expert-mcp-server.svg)](https://github.com/yourusername/bible-expert-mcp-server/stargazers)
+[![GitHub release](https://img.shields.io/github/release/yourusername/letter-to-god-mcp-server.svg)](https://github.com/yourusername/letter-to-god-mcp-server/releases)
+[![GitHub issues](https://img.shields.io/github/issues/yourusername/letter-to-god-mcp-server.svg)](https://github.com/yourusername/letter-to-god-mcp-server/issues)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/letter-to-god-mcp-server.svg)](https://github.com/yourusername/letter-to-god-mcp-server/stargazers)
 ```
 
 ## Sharing Your Repository
@@ -99,14 +99,14 @@ Add these badges to the top of your README.md:
 ### Option 1: Direct GitHub Link
 Share the repository URL:
 ```
-https://github.com/yourusername/bible-expert-mcp-server
+https://github.com/yourusername/letter-to-god-mcp-server
 ```
 
 ### Option 2: Installation Command
 Users can install directly:
 ```bash
-git clone https://github.com/yourusername/bible-expert-mcp-server.git
-cd bible-expert-mcp-server
+git clone https://github.com/yourusername/letter-to-god-mcp-server.git
+cd letter-to-god-mcp-server
 npm install
 npm run setup
 ```
@@ -114,7 +114,7 @@ npm run setup
 ### Option 3: One-Line Setup
 Create a setup script users can run:
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/bible-expert-mcp-server/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/yourusername/letter-to-god-mcp-server/main/install.sh | bash
 ```
 
 ## Publishing to NPM (Optional)
@@ -127,7 +127,7 @@ To make installation even easier:
 npm login
 
 # Check package name availability
-npm view bible-expert-mcp-server
+npm view letter-to-god-mcp-server
 
 # If available, publish
 npm publish
@@ -136,7 +136,7 @@ npm publish
 ### 2. Update Installation Instructions
 Users can then install with:
 ```bash
-npm install -g bible-expert-mcp-server
+npm install -g letter-to-god-mcp-server
 ```
 
 ## Community Features
@@ -184,7 +184,7 @@ Add any other context about the problem here.
 
 Create `CONTRIBUTING.md`:
 ```markdown
-# Contributing to Bible Expert MCP Server
+# Contributing to Letter to God MCP Server
 
 We welcome contributions! Please read this guide before submitting.
 

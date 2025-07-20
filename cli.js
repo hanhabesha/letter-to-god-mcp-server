@@ -214,7 +214,7 @@ Find three Bible scriptures that will guide me through this problem. Then act as
 
 // Set up CLI with yargs
 const argv = yargs(hideBin(process.argv))
-    .usage(colorize('\n🙏 Bible Expert - Get personalized guidance from God\n', 'bright') + 
+    .usage(colorize('\n🙏 Letter to God - Get personalized guidance from God\n', 'bright') + 
            colorize('Usage: $0 --name <your-name> --feeling <what-you-are-feeling>', 'cyan'))
     .option('name', {
         alias: 'n',
@@ -239,7 +239,7 @@ const argv = yargs(hideBin(process.argv))
 
 // Main execution
 async function main() {
-    console.log(colorize('\n🌟 Welcome to Bible Expert - Letter to God 🌟', 'bright'));
+    console.log(colorize('\n🌟 Welcome to Letter to God - Bible Guidance 🌟', 'bright'));
     
     if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === 'your_openai_api_key_here') {
         console.error(colorize('\n❌ OpenAI API key not configured!', 'red'));

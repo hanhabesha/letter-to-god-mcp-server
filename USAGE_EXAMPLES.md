@@ -1,4 +1,4 @@
-# Usage Examples - Bible Expert MCP Server
+# Usage Examples - Letter to God MCP Server
 
 ## Quick CLI Examples
 
@@ -38,7 +38,7 @@ npm test      # Test server functionality
 When you run the CLI, you'll see beautiful colored output with proper text wrapping:
 
 ```
-🌟 Welcome to Bible Expert - Letter to God 🌟
+🌟 Welcome to Letter to God - Bible Guidance 🌟
 
 🙏 Seeking Bible guidance...
 Name: John
