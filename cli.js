@@ -223,7 +223,7 @@ async function getBibleGuidance(name, feeling) {
 
 Find three Bible scriptures that will guide me through this problem. Then act as God Almighty and write me a full length personalized letter to me using the three bible scriptures that have been chosen. Explain each scripture chosen with a short summary in a form of stories. The letter should include other stories and parables that could help me. The letter should include a list of actions and activities I can do to help me cope and overcome this problem. The letter should be personalized and written to me as if you God is talking directly to me.`;
 
-        console.log(colorize('📡 Connecting to OpenAI...', 'yellow'));
+        console.log(colorize('📡 Sending Letter to God...', 'yellow'));
 
         // Send request to OpenAI
         const completion = await client.chat.completions.create({
