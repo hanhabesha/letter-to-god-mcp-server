@@ -18,7 +18,6 @@ A Model Context Protocol (MCP) server that provides personalized Bible guidance 
 
 ```bash
 # Install dependencies
-```bash
 npm npx letter-to-god-mcp-server
 ```
 # Set your API key:
