@@ -14,8 +14,11 @@ A Model Context Protocol (MCP) server that provides personalized Bible guidance 
 
 ## Quick Start
 
-### ✅ Option 1: Use Instantly via NPX (No Install Required)
-
+### ✅ Option 1: Install Globally OR Use Instantly via NPX (No Install Required)
+```bash
+npm install -g letter-to-god-mcp-server
+```
+OR
 ```bash
 # Install dependencies
 npm npx letter-to-god-mcp-server
