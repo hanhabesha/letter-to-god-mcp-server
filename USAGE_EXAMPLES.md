@@ -44,7 +44,7 @@ When you run the CLI, you'll see beautiful colored output with proper text wrapp
 Name: John
 Feeling: anxious about my future
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📡 Connecting to OpenAI...
+📡 Sending Letter to God...
 
 ✨ BIBLE GUIDANCE FROM GOD ✨
 ════════════════════════════════════════════════════════════

@@ -4,11 +4,69 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import OpenAI from 'openai';
 import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+// OpenAI client will be initialized lazily
+let openai = null;
+
+// Function to initialize OpenAI client safely
+function initializeOpenAI() {
+    if (openai) return openai;
+    
+    const apiKey = process.env.OPENAI_API_KEY;
+    
+    if (!apiKey || apiKey === 'your_openai_api_key_here') {
+        throw new Error('OPENAI_API_KEY_MISSING');
+    }
+    
+    try {
+        openai = new OpenAI({ apiKey });
+        return openai;
+    } catch (error) {
+        throw new Error(`Failed to initialize OpenAI client: ${error.message}`);
+    }
+}
+
+// Function to show setup instructions
+function showSetupInstructions() {
+    console.log(colorize('\n📋 SETUP REQUIRED', 'yellow'));
+    console.log(colorize('═'.repeat(50), 'yellow'));
+    console.log('');
+    console.log('To use Letter to God, you need an OpenAI API key:');
+    console.log('');
+    console.log(colorize('1. Get your API key:', 'cyan'));
+    console.log('   • Visit: https://platform.openai.com/api-keys');
+    console.log('   • Sign up or log in');
+    console.log('   • Create a new secret key');
+    console.log('   • Copy the key (starts with sk-)');
+    console.log('');
+    console.log(colorize('2. Set your API key:', 'cyan'));
+    console.log('   • Option A: Set environment variable');
+    console.log('     export OPENAI_API_KEY="your-api-key-here"');
+    console.log('');
+    console.log('   • Option B: Create .env file in current directory');
+    console.log('     echo "OPENAI_API_KEY=your-api-key-here" > .env');
+    console.log('');
+    console.log(colorize('3. Try again:', 'cyan'));
+    console.log('   npx letter-to-god-mcp-server --name "John" --feeling "testing"');
+    console.log('');
+    console.log(colorize('💡 Need help? Visit: https://github.com/hanhabesha/letter-to-god-mcp-server', 'blue'));
+    console.log('');
+}
+
+// Function to create .env file interactively
+function createEnvFile(apiKey) {
+    const envContent = `OPENAI_API_KEY=${apiKey}\n`;
+    try {
+        fs.writeFileSync('.env', envContent);
+        console.log(colorize('✅ Created .env file successfully!', 'green'));
+        return true;
+    } catch (error) {
+        console.log(colorize(`❌ Failed to create .env file: ${error.message}`, 'red'));
+        return false;
+    }
+}
 
 // Colors for terminal output
 const colors = {
@@ -152,6 +210,9 @@ function formatAndDisplayResponse(response) {
 
 async function getBibleGuidance(name, feeling) {
     try {
+        // Initialize OpenAI client safely
+        const client = initializeOpenAI();
+        
         console.log(colorize('\n🙏 Seeking Bible guidance...', 'cyan'));
         console.log(colorize(`Name: ${name}`, 'blue'));
         console.log(colorize(`Feeling: ${feeling}`, 'blue'));
@@ -162,10 +223,10 @@ async function getBibleGuidance(name, feeling) {
 
 Find three Bible scriptures that will guide me through this problem. Then act as God Almighty and write me a full length personalized letter to me using the three bible scriptures that have been chosen. Explain each scripture chosen with a short summary in a form of stories. The letter should include other stories and parables that could help me. The letter should include a list of actions and activities I can do to help me cope and overcome this problem. The letter should be personalized and written to me as if you God is talking directly to me.`;
 
-        console.log(colorize('📡 Connecting to OpenAI...', 'yellow'));
+        console.log(colorize('📡 Sending Letter to God...', 'yellow'));
 
         // Send request to OpenAI
-        const completion = await openai.chat.completions.create({
+        const completion = await client.chat.completions.create({
             model: "gpt-4",
             messages: [
                 {
@@ -202,10 +263,16 @@ Find three Bible scriptures that will guide me through this problem. Then act as
         return response;
 
     } catch (error) {
+        if (error.message === 'OPENAI_API_KEY_MISSING') {
+            showSetupInstructions();
+            process.exit(1);
+        }
+        
         console.error(colorize('\n❌ Error getting Bible guidance:', 'red'), error.message);
         
-        if (error.message.includes('API key')) {
-            console.log(colorize('\n💡 Make sure your OpenAI API key is set in the .env file', 'yellow'));
+        if (error.message.includes('API key') || error.message.includes('authentication')) {
+            console.log(colorize('\n💡 Your API key might be invalid. Please check it and try again.', 'yellow'));
+            showSetupInstructions();
         }
         
         process.exit(1);
@@ -215,7 +282,8 @@ Find three Bible scriptures that will guide me through this problem. Then act as
 // Set up CLI with yargs
 const argv = yargs(hideBin(process.argv))
     .usage(colorize('\n🙏 Letter to God - Get personalized guidance from God\n', 'bright') + 
-           colorize('Usage: $0 --name <your-name> --feeling <what-you-are-feeling>', 'cyan'))
+           colorize('Usage: $0 --name <your-name> --feeling <what-you-are-feeling>', 'cyan') + 
+           colorize('\n\n⚠️  Requires OpenAI API key - see setup instructions if not configured', 'yellow'))
     .option('name', {
         alias: 'n',
         type: 'string',
@@ -241,13 +309,12 @@ const argv = yargs(hideBin(process.argv))
 async function main() {
     console.log(colorize('\n🌟 Welcome to Letter to God - Bible Guidance 🌟', 'bright'));
     
-    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === 'your_openai_api_key_here') {
-        console.error(colorize('\n❌ OpenAI API key not configured!', 'red'));
-        console.log(colorize('Please set your API key in the .env file', 'yellow'));
-        process.exit(1);
+    try {
+        await getBibleGuidance(argv.name, argv.feeling);
+    } catch (error) {
+        // Error handling is done in getBibleGuidance function
+        // This catch is just to prevent unhandled promise rejection
     }
-
-    await getBibleGuidance(argv.name, argv.feeling);
 }
 
 main().catch(console.error);

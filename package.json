@@ -1,6 +1,6 @@
 {
   "name": "letter-to-god-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -32,12 +32,12 @@
   "description": "A Model Context Protocol (MCP) server that provides personalized Bible guidance and mentorship through AI integration with OpenAI's ChatGPT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/letter-to-god-mcp-server.git"
+    "url": "https://github.com/hanhabesha/letter-to-god-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/letter-to-god-mcp-server/issues"
+    "url": "https://github.com/hanhabesha/letter-to-god-mcp-server.git/issues"
   },
-  "homepage": "https://github.com/yourusername/letter-to-god-mcp-server#readme",
+  "homepage": "https://github.com/hanhabesha/letter-to-god-mcp-server.git#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "dotenv": "^17.2.0",
