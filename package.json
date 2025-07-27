@@ -8,11 +8,13 @@
   },
   "scripts": {
     "start": "node index.js",
+    "start:standalone": "STANDALONE_MODE=true node index.js",
     "cli": "node cli.js",
     "test": "node test-server.js",
     "build": "npx tsc",
     "help": "node cli.js --help",
-    "setup": "cp .env.example .env && echo 'Please edit .env file with your OpenAI API key'"
+    "setup": "cp .env.example .env && echo 'Please edit .env file with your OpenAI API key'",
+    "setup:mcp": "echo 'MCP mode - no API key needed. Server will generate prompts for your MCP client.'"
   },
   "keywords": [
     "mcp",
@@ -41,9 +43,11 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "dotenv": "^17.2.0",
-    "openai": "^5.10.1",
-    "yargs": "^18.0.0",
+    "yargs": "^17.7.2",
     "zod": "^3.25.76"
+  },
+  "optionalDependencies": {
+    "openai": "^5.10.1"
   },
   "devDependencies": {
     "@types/node": "^24.0.15",
